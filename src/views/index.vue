@@ -1,7 +1,11 @@
 <template>
  <div>
      <Menu></Menu>
-     
+     <div class="main">
+        <transition name="fade-transform" mode="out-in">
+          <router-view />
+        </transition>
+     </div>
  </div>
 </template>
 
@@ -11,7 +15,7 @@ import Menu from '@/components/menu'
      name:'index',
    data () {
      return {
-
+        
      }
    },
    components: {
@@ -21,6 +25,9 @@ import Menu from '@/components/menu'
 </script>
 
 <style>
-
+.main{
+  position: relative;
+  left: 225px;
+}
  
 </style>

@@ -3,26 +3,35 @@ import VueRouter from 'vue-router'
 
 import HelloWorld from '@/components/HelloWorld.vue'
 import Index from '@/views/index.vue'
-import Test from '@/components/test'
-import elGriad from '@/components/el-griad'
-
+import One from '@/views/one.vue'
+import Test from '@/views/test'
+import Form from '@/views/form'
 
 Vue.use(VueRouter)
 
 const routes = [
-    { path: '/', component: Index },
+    { path: '/', component: HelloWorld },
     {
-        path:'/helloWorld',
-        component:HelloWorld
+        path:'/meat',
+        component:Index,
+        children:[{
+          path: 'one',
+          name: 'one',
+          component: One,
+        },
+        {
+          path: 'form',
+          name: 'form',
+          component: Form,
+        },
+        {
+          path: 'test',
+          name: 'test',
+          component: Test,
+        },
+      ]
     },
-    {
-      path:'/test',
-      component:Test
-  },
-    {
-      path:'/elGriad',
-      component:elGriad
-  }
+    
   ]
 
 
