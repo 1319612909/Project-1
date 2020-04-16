@@ -1,7 +1,7 @@
 <template>
   <div class="linkage">
     <el-select
-      v-model="sheng"
+      v-model="provinceVal"
       @change="choseProvince"
       placeholder="省级地区">
       <el-option
@@ -12,22 +12,22 @@
       </el-option>
     </el-select>
     <el-select
-      v-model="shi"
+      v-model="cityVal"
       @change="choseCity"
       placeholder="市级地区">
       <el-option
-        v-for="item in shi1"
+        v-for="item in cityArry"
         :key="item.id"
         :label="item.value"
         :value="item.id">
       </el-option>
     </el-select>
     <el-select
-      v-model="qu"
-      @change="choseBlock"
+      v-model="regionVal"
+      @change="choseRegion"
       placeholder="区级地区">
       <el-option
-        v-for="item in qu1"
+        v-for="item in regionArry"
         :key="item.id"
         :label="item.value"
         :value="item.id">
@@ -43,15 +43,16 @@ export default {
   name:'select',
   data () {
     return {
-      mapJson:'../static/json/map.json' ,
+      mapJson:'../../public/json/map.json' ,
       province:'',
-      sheng: '',
-      shi: '',
-      shi1: [],
-      qu: '',
-      qu1: [],
       city:'',
-      block:''
+      region:'',
+      provinceVal: '',
+      cityVal: '',
+      cityArry: [],
+      regionVal: '',
+      regionArry: [],
+      
     }
   },
 
@@ -60,45 +61,44 @@ export default {
         // axios.post('/api/test').then(res=>{
         //   console.log(res)
         // })
-          console.log(this.jsonUrl)
-        axios.get(this.jsonUrl).then(res=>{
-          console.log(res)
-        })
+          console.log(this.mapJson)
+
+        // axios.get('/data/map.json').then(res=>{
+        //   console.log(res)
+        // })
     },
     // 加载china地点数据，三级
       getCityData:function(){
-      //  let ma = require('../../static/json/map.json')
-       var that = this
-        axios.get('../../static/json/map.json').then(function(response){
-          console.log(response)
+       let that = this
+        axios.get('/data/map.json').then(function(response){
           if (response.status==200) {
-            var data = response.data
+            const data = response.data
             that.province = []
             that.city = []
-            that.block = []
+            that.region = []
             // 省市区数据分类
-            for (var item in data) {
+            for (let item in data) {
               if (item.match(/0000$/)) {//省
                 that.province.push({id: item, value: data[item], children: []})
               } else if (item.match(/00$/)) {//市
                 that.city.push({id: item, value: data[item], children: []})
               } else {//区
-                that.block.push({id: item, value: data[item]})
+                that.region.push({id: item, value: data[item]})
               }
             }
             // 分类市级
-            for (var index in that.province) {
-              for (var index1 in that.city) {
+            for (let index in that.province) {
+              for (let index1 in that.city) {
                 if (that.province[index].id.slice(0, 2) === that.city[index1].id.slice(0, 2)) {
                   that.province[index].children.push(that.city[index1])
                 }
               }
             }
             // 分类区级
-            for(var item1 in that.city) {
-              for(var item2 in that.block) {
-                if (that.block[item2].id.slice(0, 4) === that.city[item1].id.slice(0, 4)) {
-                  that.city[item1].children.push(that.block[item2])
+            for(let item1 in that.city) {
+              for(let item2 in that.region) {
+                if (that.region[item2].id.slice(0, 4) === that.city[item1].id.slice(0, 4)) {
+                  that.city[item1].children.push(that.region[item2])
                 }
               }
             }
@@ -110,35 +110,35 @@ export default {
       },
       // 选省
       choseProvince:function(e) {
-        for (var index2 in this.province) {
+        for (let index2 in this.province) {
           if (e === this.province[index2].id) {
-            this.shi1 = this.province[index2].children
-            this.shi = this.province[index2].children[0].value
-            this.qu1 =this.province[index2].children[0].children
-            this.qu = this.province[index2].children[0].children[0].value
-            this.E = this.qu1[0].id
+            this.cityArry = this.province[index2].children
+            // this.cityVal = this.province[index2].children[0].value //选择市自动选出第一个市
+            this.regionArry =this.province[index2].children[0].children
+            // this.regionVal = this.province[index2].children[0].children[0].value  //选择市自动选出第一个区
+            this.E = this.regionArry[0].id
           }
         }
       },
       // 选市
       choseCity:function(e) {
-        for (var index3 in this.city) {
+        for (let index3 in this.city) {
           if (e === this.city[index3].id) {
-            this.qu1 = this.city[index3].children
-            this.qu = this.city[index3].children[0].value
-            this.E = this.qu1[0].id
+            this.regionArry = this.city[index3].children
+            // this.regionVal = this.city[index3].children[0].value  //选择市自动选出第一个区
+            this.E = this.regionArry[0].id
             // console.log(this.E)
           }
         }
       },
       // 选区
-      choseBlock:function(e) {
+      choseRegion:function(e) {
         this.E=e;
         // console.log(this.E)
       },
     },
     created:function(){
-      // this.getCityData()
+      this.getCityData()
      this.test()
     }
 }
