@@ -20,6 +20,9 @@
           <el-menu-item index="1-1" @click="goTo('/meat/one')">表格</el-menu-item>
           <el-menu-item index="1-2" @click="goTo('/meat/form')">表单</el-menu-item>
           <el-menu-item index="1-3" @click="goTo('/meat/test')">测试</el-menu-item>
+          <el-menu-item index="1-3" @click="goTo('/meat/select')">联动</el-menu-item>
+
+          <!-- <el-menu-item index="1-4" @click="goTo('/meat/export')">导出</el-menu-item> -->
         </el-menu-item-group>
       </el-submenu>
     </el-menu>

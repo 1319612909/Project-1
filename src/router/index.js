@@ -6,6 +6,8 @@ import Index from '@/views/index.vue'
 import One from '@/views/one.vue'
 import Test from '@/views/test'
 import Form from '@/views/form'
+// import Export from '@/views/export'
+import Select from '@/views/select'
 
 Vue.use(VueRouter)
 
@@ -29,6 +31,11 @@ const routes = [
           name: 'test',
           component: Test,
         },
+        {
+          path:'select',
+          name: 'select',
+          component: Select,
+        }
       ]
     },
     
