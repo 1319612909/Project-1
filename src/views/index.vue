@@ -28,6 +28,7 @@ import Menu from '@/components/menu'
 .main{
   position: relative;
   left: 225px;
+  width: calc(100% - 230px);
 }
  
 </style>

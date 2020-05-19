@@ -4,17 +4,17 @@ import VueRouter from 'vue-router'
 import HelloWorld from '@/components/HelloWorld.vue'
 import Index from '@/views/index.vue'
 import One from '@/views/one.vue'
-import Test from '@/views/test'
+// import Test from '@/views/test'
 import Form from '@/views/form'
-// import Export from '@/views/export'
+import Export from '@/views/export'
 import Select from '@/views/select'
 
 Vue.use(VueRouter)
 
 const routes = [
-    { path: '/', component: HelloWorld },
+    { path: '/', component: Index },
     {
-        path:'/meat',
+        path:'/',
         component:Index,
         children:[{
           path: 'one',
@@ -27,9 +27,9 @@ const routes = [
           component: Form,
         },
         {
-          path: 'test',
-          name: 'test',
-          component: Test,
+          path: 'export',
+          name: 'export',
+          component: Export,
         },
         {
           path:'select',
