@@ -12,6 +12,6 @@ module.exports = {
             warnings: false,
             errors: true
         },
-        proxy:'http://10.188.68.113:8099'
+        proxy:'http://127.0.0.1:8888'
     }
 }
