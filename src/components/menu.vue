@@ -17,12 +17,12 @@
           <span>测试</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="1-1" @click="goTo('/meat/one')">表格</el-menu-item>
-          <el-menu-item index="1-2" @click="goTo('/meat/form')">表单</el-menu-item>
-          <el-menu-item index="1-3" @click="goTo('/meat/test')">测试</el-menu-item>
-          <el-menu-item index="1-3" @click="goTo('/meat/select')">省市县联动</el-menu-item>
+          <el-menu-item index="1-1" @click="goTo('/one')">表格</el-menu-item>
+          <el-menu-item index="1-2" @click="goTo('/form')">表单</el-menu-item>
+          <el-menu-item index="1-3" @click="goTo('/export')">测试</el-menu-item>
+          <el-menu-item index="1-3" @click="goTo('/select')">省市县联动</el-menu-item>
 
-          <!-- <el-menu-item index="1-4" @click="goTo('/meat/export')">导出</el-menu-item> -->
+          <!-- <el-menu-item index="1-4" @click="goTo('/export')">导出</el-menu-item> -->
         </el-menu-item-group>
       </el-submenu>
     </el-menu>
@@ -59,14 +59,14 @@
 
 <style lang="scss">
 .menuBox{
-.tac{
-   width: 220px;
+  width: 220px;
    height: 100%;
    position: fixed;
     left: 0;
     top: 0;
     bottom: 0;
     background:rgb(84, 92, 100);
+.tac{
     .titH2{
         color:#fff;
     }
