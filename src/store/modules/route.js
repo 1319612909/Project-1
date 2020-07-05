@@ -3,7 +3,7 @@ import { routes } from '@/router/index'
 
 const app = {
   state: {
-    routes: routes,
+    routes: routes
   },
   mutations: {
     setroutes: (state, routes) => {
@@ -12,6 +12,7 @@ const app = {
     routerFlag: (state, flag) => {
       state.routerFlag = flag
     }
+   
   },
   actions: {
   

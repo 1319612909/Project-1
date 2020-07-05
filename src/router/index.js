@@ -8,7 +8,7 @@ import One from '@/views/one.vue'
 import Form from '@/views/form'
 import Export from '@/views/export'
 import Select from '@/views/select'
-
+import TodoList from '@/views/todoList'
 Vue.use(VueRouter)
 
 const routes = [
@@ -35,6 +35,11 @@ const routes = [
           path:'select',
           name: 'select',
           component: Select,
+        },
+        {
+          path:'todoList',
+          name:'todoList',
+          component:TodoList
         }
       ]
     },
