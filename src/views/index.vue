@@ -22,6 +22,7 @@ import Menu from '@/components/menu'
        Menu
    }
  }
+
 </script>
 
 <style>
