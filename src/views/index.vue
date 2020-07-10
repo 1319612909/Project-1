@@ -11,6 +11,7 @@
 
 <script>
 import Menu from '@/components/menu'
+// import menu from '@/components/menu'
  export default {
      name:'index',
    data () {

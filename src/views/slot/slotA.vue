@@ -24,7 +24,7 @@ export default {
 具名插槽
 在子组件内 <slot name="header"></slot> 使用name属性赋值
 在父组件中,使用template slot属性对应name的值
- <SlotB>
+ <SlotB>l
     <template slot="header">
      <h1>header</h1>
     </template>

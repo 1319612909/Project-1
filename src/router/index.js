@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import HelloWorld from '@/components/HelloWorld.vue'
-import Index from '@/views/index.vue'
+import Layout from '@/views/layout'
 import One from '@/views/one.vue'
 // import Test from '@/views/test'
 import Form from '@/views/form'
@@ -14,15 +14,16 @@ import slot from '@/views/slot'
 Vue.use(VueRouter)
 
 const routes = [
-    { path: '/', component: Index },
+    { path: '/', component: Layout },
     {
         path:'/',
-        component:Index,
+        component:Layout,
         children:[{
           path: 'one',
           name: 'one',
           component: One,
         },
+        
         {
           path: 'form',
           name: 'form',
