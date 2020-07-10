@@ -22,6 +22,7 @@
           <el-menu-item index="1-3" @click="goTo('/export')">测试</el-menu-item>
           <el-menu-item index="1-4" @click="goTo('/select')">省市县联动</el-menu-item>
           <el-menu-item index="1-5" @click="goTo('/todoList')">todolist</el-menu-item>
+          <el-menu-item index="1-6" @click="goTo('/slot')">slot</el-menu-item>
 
           <!-- <el-menu-item index="1-4" @click="goTo('/export')">导出</el-menu-item> -->
         </el-menu-item-group>
