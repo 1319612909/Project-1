@@ -10,7 +10,7 @@
 			"path": "home",
 			"name": "home",
 			"hidden": false,
-			"component": "views/home/index.vue",
+			"component": "views/layout/home/index.vue",
 			"sort": 1,
 			"meta": {
 				"keepAlive": false,

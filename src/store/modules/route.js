@@ -19,6 +19,7 @@ const formatRouter = (routes) => {
 
 
 export const route = {
+  namespaced:true,
   state: {
     routeList: [],
     asyncRouters:[]
@@ -39,7 +40,7 @@ export const route = {
       const baseRouter = [{
         path: '/layout',
         name: 'layout',
-        component: "view/layout/index.vue",
+        component: "views/layout/index.vue",
         meta: {
             title: "底层layout"
         },
@@ -57,7 +58,7 @@ export const route = {
             meta: {
                 title: "迷路了*。*",
             },
-            component: 'view/error/index.vue'
+            component: 'views/error/index.vue'
         })
         
        
