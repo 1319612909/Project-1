@@ -1,5 +1,5 @@
 <template>
-        <div>
+        <div class="bgBox">
              <SlotA>
               <p>父元素slotA标签内部的内容 --------  获取对应slotA组件定义的数据：{{msg}} </p>
             </SlotA>

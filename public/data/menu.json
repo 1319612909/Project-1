@@ -16,7 +16,7 @@
 				"keepAlive": false,
 				"defaultMenu": false,
 				"title": "首页",
-				"icon": "setting"
+				"icon": "s-promotion"
 			},
 			"authoritys": null,
 			"menuId": "1",
@@ -36,7 +36,7 @@
 				"keepAlive": false,
 				"defaultMenu": false,
 				"title": "组件",
-				"icon": "user-solid"
+				"icon": "files"
 			},
 			"authoritys": null,
 			"menuId": "3",
@@ -55,7 +55,7 @@
 					"keepAlive": false,
 					"defaultMenu": false,
 					"title": "导出",
-					"icon": "s-custom"
+					"icon": "upload2"
 				},
 				"authoritys": null,
 				"menuId": "4",
@@ -94,8 +94,8 @@
 				"meta": {
 					"keepAlive": true,
 					"defaultMenu": false,
-					"title": "省市县",
-					"icon": "s-platform"
+					"title": "联动",
+					"icon": "s-operation"
 				},
 				"authoritys": null,
 				"menuId": "6",
@@ -114,8 +114,8 @@
 				"meta": {
 					"keepAlive": false,
 					"defaultMenu": false,
-					"title": "列表",
-					"icon": "coordinate"
+					"title": "Todo",
+					"icon": "s-unfold"
 				},
 				"authoritys": null,
 				"menuId": "17",
@@ -136,7 +136,7 @@
 				"keepAlive": false,
 				"defaultMenu": false,
 				"title": "示例",
-				"icon": "s-cooperation"
+				"icon": "finished"
 			},
 			"authoritys": null,
 			"menuId": "38",
@@ -155,7 +155,7 @@
 					"keepAlive": true,
 					"defaultMenu": false,
 					"title": "slot示例",
-					"icon": "cpu"
+					"icon": "edit-outline"
 				},
 				"authoritys": null,
 				"menuId": "40",

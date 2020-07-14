@@ -1,6 +1,6 @@
 <template>
- <div>
-   <el-form ref="form" :model="form" label-width="80px">
+ <div class="bgBox form">
+  <el-form ref="form" :model="form" label-width="80px">
   <el-form-item label="活动名称">
     <el-input v-model="form.name"></el-input>
   </el-form-item>
@@ -50,9 +50,9 @@
 <script>
  export default {
     name:'form',
-   data () {
-     return {
-       form: {
+   data() {
+      return {
+        form: {
           name: '',
           region: '',
           date1: '',
@@ -62,20 +62,23 @@
           resource: '',
           desc: ''
         }
-     }
-   },
-   components: {
-
-   },
-   methods:{
+      }
+    },
+    methods: {
       onSubmit() {
         console.log('submit!');
       }
-   }
+    }
  }
 </script>
 
 <style>
 
- 
+ .form{
+   padding-left: 30px;
+ }
+ .el-form-item__content{
+   width: 50%;
+   text-align: left;
+ }
 </style>

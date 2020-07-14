@@ -5,6 +5,7 @@
       class="el-menu-vertical-demo"
        @select="selectMenuItem"
       :collapse="isCollapse"
+      unique-opened
     >
       <template v-for="(item,index) in asyncRouters[0].children">
         <navComponent  :key="index" :routData='item'></navComponent>
@@ -30,7 +31,7 @@ export default {
           id:1},
           {label:'456',
           id:1}
-        ]
+        ],
        
     };
   },

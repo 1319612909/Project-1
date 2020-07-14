@@ -1,5 +1,5 @@
 <template>
- <div>
+ <div class="bgBox">
      <el-upload
         class="upload-demo"
         action=""

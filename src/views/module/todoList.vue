@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="bgBox">
         <div class="todo">
             <div class="search">
                 <el-input  v-model="input"  placeholder="请输入内容" @input='getVal()'></el-input>
@@ -82,6 +82,7 @@ import { mapState, mapGetters} from 'vuex'
 .todo{
     width: 60%;
     text-align: left;
+    padding-left: 20px;
 }
 ul,li{
     list-style: none;

@@ -11,7 +11,9 @@
           <!-- <router-view /> -->
         </transition>
          <transition mode="out-in" name="el-fade-in-linear">
+            <div class="mainBox">
             <router-view ></router-view>
+            </div>
         </transition>
      </div>
  </div>
@@ -61,6 +63,14 @@ import Menu from './navbar'
 .topNav{
   padding-left: 15px;
   text-align: left;
+  min-height: 40px;
+  line-height: 40px;
+  margin-left: 8px;
+  background: #fff;
+   box-shadow: 0 .5rem 1rem rgba(18,38,63,.05);
+}
+.mainBox{
+  padding: 40px 30px 30px 20px;
 }
  
 </style>

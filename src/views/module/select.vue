@@ -1,5 +1,6 @@
 <template>
-  <div class="linkage">
+  <div class="linkage bgBox">
+    <span class="checked">请选择:</span>
     <el-select
       v-model="provinceVal"
       @change="choseProvince"
@@ -57,16 +58,7 @@ export default {
   },
 
   methods:{
-    test(){
-        // axios.post('/api/test').then(res=>{
-        //   console.log(res)
-        // })
-          console.log(this.mapJson)
-
-        // axios.get('/data/map.json').then(res=>{
-        //   console.log(res)
-        // })
-    },
+   
     // 加载china地点数据，三级
       getCityData:function(){
        let that = this
@@ -139,10 +131,17 @@ export default {
     },
     created:function(){
       this.getCityData()
-     this.test()
     }
 }
 </script>
 
 <style scoped>
+.linkage{
+  min-height: 300px;
+  padding-left: 30px;
+  text-align: left;
+}
+.checked{
+  margin-right: 15px;
+}
 </style>
