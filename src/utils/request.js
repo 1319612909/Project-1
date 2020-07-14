@@ -1,19 +1,19 @@
 import axios from 'axios'
 import router from '@/router'
 import { Loading, Message } from 'element-ui'
-import snLodash from '@/utils/snLodash'
+// import snLodash from '@/utils/snLodash'
 import {
     Notification,
     MessageBox
 } from 'element-ui'
 
 import store from '@/store'
-import {
-    getToken,
-    getUserCode,
-    clearAll,
-    getUserInfo
-} from './auth'
+// import {
+//     getToken,
+//     getUserCode,
+//     clearAll,
+//     getUserInfo
+// } from './auth'
 // 创建axios实例
 const service = axios.create({
         baseURL: "api" + '/service-route/' // api 的 base_url
@@ -77,7 +77,7 @@ service.interceptors.request.use(
             openLoading()
             const requestId = new Date().getTime() + '|' + getUserInfo().loginName
             const url = '/gw-sys/api/meta-login/login'
-            config.data = snLodash.deepCloneRush(config.data)
+            // config.data = snLodash.deepCloneRush(config.data)
             if (config.data && !(BlackNames.indexOf(config.url) > -1)) {
                 if (!config.data.commonInfo) {
                     config.data.commonInfo = {}

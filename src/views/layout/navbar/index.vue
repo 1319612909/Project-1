@@ -6,26 +6,18 @@
        @select="selectMenuItem"
       :collapse="isCollapse"
     >
-      <el-submenu index="1" v-for="item in testArr" :key="item.id">
-        <template slot="title">
-          <i class="el-icon-location"></i>
-          <span slot="title">{{item.label}}</span>
-        </template>
-          <el-menu-item index="slot">选项2</el-menu-item>
-          <el-menu-item index="select">选项3</el-menu-item>
-      </el-submenu>
-
+      <template v-for="(item,index) in asyncRouters[0].children">
+        <navComponent  :key="index" :routData='item'></navComponent>
+        </template>  
     </el-menu>
-    
-
-
   </div>
 </template>
 
 <script>
 import axios from 'axios'
-// import elMenu from './elMenu'
-// import { asyncRouterHandle } from '@/utils/asyncRouter'
+import store from '@/store'
+import { mapGetters } from 'vuex'
+import navComponent from './navComponent'
 export default {
   data() {
     return {
@@ -48,12 +40,18 @@ export default {
         type:Boolean
       }
   },
+  computed:{
+    ...mapGetters(['asyncRouters'])
+  },
   created(){
       this.init()
+      store.dispatch('setAsyncRouter')
+      setTimeout(()=>{
+      console.log(this.asyncRouters[0],'555')
 
-      
+      },1000)
   },
-//   components: {elMenu},
+  components: {navComponent},
    methods: {
      selectMenuItem(index){
        console.log(index)
@@ -92,7 +90,7 @@ export default {
         
           
 
-              console.log(this.routerList,'1')  
+              // console.log(this.routerList,'1')  
 
               /*
             16个没有childer的菜单名字
@@ -101,7 +99,7 @@ export default {
               
               */ 
             //  asyncRouters == baseRouter
-              console.log(this.baseRouter,'2')
+              // console.log(this.baseRouter,'2')
 
             // baseRouter,一级菜单
 

@@ -1,8 +1,8 @@
 <template>
-    <el-submenu>
-        <template slot="title" :index="routerList">
+    <el-submenu :index="routData.name">
+        <template slot="title">
           <i class="el-icon-location"></i>
-          <span slot="title">{{routerList.title}}</span>
+          <span slot="title">{{routData.meta.title}}</span>
         </template>
         <slot></slot>
         <!-- <el-menu-item  :index="data.menuId" v-for="data in item.children" :key="data.ID">{{data.meta.title}}</el-menu-item> -->
@@ -17,12 +17,14 @@
 
      }
    },
-     props:{
-      routerList:{
-        default:null,
-        type:Array
-      }
-  },
+  props:{
+    routData: {
+          default: function() {
+            return null
+          },
+          type: Object
+        }
+   },
   
    components: {
 

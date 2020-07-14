@@ -43,8 +43,6 @@
             state.doneKey = key
         }
 
-
-
     },
     actions:{
         // Action 提交的是 mutation，可以包含任意异步操作
@@ -88,7 +86,7 @@
         //            }
         //        ]
         //  commit('initList',list)
-         
+         console.log('789')
         axios.get('/data/list.json').then((res)=>{
                   console.log(res)
                   commit('initList',res.data)

@@ -31,6 +31,7 @@
 import store from '@/store'
 import { mapState, mapGetters} from 'vuex'
      export default {
+          name:'todoList',
          data(){
              return{
                 //  list:[]

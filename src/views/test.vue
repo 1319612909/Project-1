@@ -27,7 +27,7 @@
      fileChange(e){
         this.file = e.target.files[0]
         this.list.push(this.file)
-     }，
+     },
    getBase64(file) {
       return new Promise(function(resolve, reject) {
         let reader = new FileReader();

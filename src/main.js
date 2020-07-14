@@ -9,7 +9,7 @@ import router from '@/router'
 import Mock from '@/mock/index'
 import store  from '@/store/index'
 // import router from '@/router'
-
+import '@/permission'
 Vue.prototype.jsonUrl = './static/json/map.json';
 new Vue({
   router,

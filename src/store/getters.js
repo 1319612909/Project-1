@@ -1,5 +1,6 @@
 const getters = {
-    // routes: state => state.route.routes,
+    routeList: state => state.route.routeList,
+    asyncRouters:state => state.route.asyncRouters,
     // routerFlag: state => state.route.routerFlag,
     list:state => state.todo.list,
     textVal:state => state.todo.textVal,
