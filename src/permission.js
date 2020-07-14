@@ -25,7 +25,7 @@ let asyncRouterFlag = 0
 router.beforeEach((to, from, next) => {
 if (!asyncRouterFlag) {
     asyncRouterFlag++
-    store.dispatch('route/setAsyncRouter')
+    store.dispatch('setAsyncRouter')
     setTimeout(()=>{
         //router.addRoutes  关键是把后台数据，处理以后的router格式，追加到router里面去，这样就可以进行路由跳转
         router.addRoutes(routeArr)  

@@ -19,7 +19,6 @@ const formatRouter = (routes) => {
 
 
 export const route = {
-  namespaced:true,
   state: {
     routeList: [],
     asyncRouters:[]

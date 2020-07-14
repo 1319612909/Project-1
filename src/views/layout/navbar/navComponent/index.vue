@@ -43,7 +43,6 @@ import itemNav from './itemNav'
       itemNav
    },
    created(){
-        console.log(this.routData,'123')
    }
  }
 </script>

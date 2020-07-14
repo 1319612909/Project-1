@@ -46,10 +46,6 @@ export default {
   created(){
       this.init()
       store.dispatch('setAsyncRouter')
-      setTimeout(()=>{
-      console.log(this.asyncRouters[0],'555')
-
-      },1000)
   },
   components: {navComponent},
    methods: {
