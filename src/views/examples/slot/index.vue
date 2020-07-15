@@ -23,7 +23,7 @@ import SlotA from './slotA'
 import SlotB from './slotB'
 
 export default {
-  name: 'slot',
+  name: 'moduleSlot',
   data(){
       return{
            isCollapse: true,

@@ -15,13 +15,11 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 const routes = [
-    { path: '/',
-      name: 'layout', 
-      component: () =>
-        import ('@/views/layout/index.vue')
-     }
-     
-  
+    // { path: '/',
+    //   name: 'layout', 
+    //   component: () =>
+    //     import ('@/views/layout/index.vue')
+    //  }
     // {
     //     path:'/',
     //     component:Layout,
@@ -68,11 +66,3 @@ const routes = [
 export default new VueRouter({
     routes 
   })
-
-  
-// export default new Router({
-//     scrollBehavior: () => ({
-//         y: 0
-//     }),
-//     routes: constantRouterMap
-// })

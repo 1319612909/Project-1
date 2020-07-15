@@ -41,7 +41,7 @@
 import axios from 'axios'
 
 export default {
-  name:'select',
+  name:'moduleSelect',
   data () {
     return {
       mapJson:'../../public/json/map.json' ,

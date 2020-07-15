@@ -73,7 +73,7 @@ export const route = {
         asyncRouterHandle(baseRouter)
         commit('setAsyncRouter', baseRouter)
         commit('setRoutes', routerList)
-        router.addRoutes(baseRouter)
+        // router.addRoutes(baseRouter)
         })
        
     
@@ -81,12 +81,7 @@ export const route = {
     }
   },
   getters:{
-    asyncRouters(state){
-      return state.asyncRouters
-    },
-    routerList(state) {
-      return state.routerList
-  }
+  
   }
 }
 
