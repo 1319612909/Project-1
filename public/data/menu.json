@@ -3,9 +3,6 @@
 	"data": {
 		"menus": [{
 			"ID": 0,
-			"CreatedAt": "2019-09-19T22:05:18+08:00",
-			"UpdatedAt": "2020-05-30T15:43:06+08:00",
-			"DeletedAt": null,
 			"parentId": "0",
 			"path": "home",
 			"name": "home",
@@ -18,14 +15,10 @@
 				"title": "首页",
 				"icon": "s-promotion"
 			},
-			"authoritys": null,
 			"menuId": "1",
 			"children": null
 		}, {
 			"ID": 0,
-			"CreatedAt": "2019-09-19T22:06:38+08:00",
-			"UpdatedAt": "2020-04-24T10:16:43+08:00",
-			"DeletedAt": null,
 			"parentId": "0",
 			"path": "module",
 			"name": "module",
@@ -38,13 +31,9 @@
 				"title": "组件",
 				"icon": "files"
 			},
-			"authoritys": null,
 			"menuId": "3",
 			"children": [{
 				"ID": 0,
-				"CreatedAt": "2019-09-19T22:11:53+08:00",
-				"UpdatedAt": "2020-05-30T15:43:25+08:00",
-				"DeletedAt": null,
 				"parentId": "3",
 				"path": "export",
 				"name": "export",
@@ -57,14 +46,10 @@
 					"title": "导出",
 					"icon": "upload2"
 				},
-				"authoritys": null,
 				"menuId": "4",
 				"children": null
 			}, {
 				"ID": 0,
-				"CreatedAt": "2019-09-19T22:13:18+08:00",
-				"UpdatedAt": "2020-04-30T17:45:27+08:00",
-				"DeletedAt": null,
 				"parentId": "3",
 				"path": "form",
 				"name": "form",
@@ -77,14 +62,10 @@
 					"title": "表单",
 					"icon": "s-order"
 				},
-				"authoritys": null,
 				"menuId": "5",
 				"children": null
 			}, {
 				"ID": 0,
-				"CreatedAt": "2019-09-19T22:13:36+08:00",
-				"UpdatedAt": "2020-04-24T10:16:43+08:00",
-				"DeletedAt": null,
 				"parentId": "3",
 				"path": "select",
 				"name": "select",
@@ -97,14 +78,10 @@
 					"title": "联动",
 					"icon": "s-operation"
 				},
-				"authoritys": null,
 				"menuId": "6",
 				"children": null
 			}, {
 				"ID": 0,
-				"CreatedAt": "2019-10-09T15:12:29+08:00",
-				"UpdatedAt": "2020-04-24T10:16:43+08:00",
-				"DeletedAt": null,
 				"parentId": "3",
 				"path": "todoList",
 				"name": "todoList",
@@ -117,15 +94,11 @@
 					"title": "Todo",
 					"icon": "s-unfold"
 				},
-				"authoritys": null,
 				"menuId": "17",
 				"children": null
 			}]
 		}, {
 			"ID": 0,
-			"CreatedAt": "2020-03-29T21:31:03+08:00",
-			"UpdatedAt": "2020-04-24T10:16:43+08:00",
-			"DeletedAt": null,
 			"parentId": "0",
 			"path": "examples",
 			"name": "examples",
@@ -138,13 +111,9 @@
 				"title": "示例",
 				"icon": "finished"
 			},
-			"authoritys": null,
 			"menuId": "38",
 			"children": [{
 				"ID": 0,
-				"CreatedAt": "2020-03-29T21:35:10+08:00",
-				"UpdatedAt": "2020-05-03T21:38:49+08:00",
-				"DeletedAt": null,
 				"parentId": "38",
 				"path": "slot",
 				"name": "slot",
@@ -157,10 +126,27 @@
 					"title": "slot示例",
 					"icon": "edit-outline"
 				},
-				"authoritys": null,
 				"menuId": "40",
 				"children": null
-			}]
+			},
+			{
+				"ID": 0,
+				"parentId": "39",
+				"path": "array",
+				"name": "array",
+				"hidden": false,
+				"component": "views/examples/array.vue",
+				"sort": 2,
+				"meta": {
+					"keepAlive": true,
+					"defaultMenu": false,
+					"title": "array示例",
+					"icon": "edit-outline"
+				},
+				"menuId": "42",
+				"children": null
+			}
+		]
 		}]
 	},
 	"msg": "操作成功"

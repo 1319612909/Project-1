@@ -3,14 +3,19 @@ import App from './App.vue'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import './assets/css/index.css'
-Vue.use(ElementUI);
-Vue.config.productionTip = false
+import echarts from 'echarts'
 import router from '@/router'
-// import './plugins/element.js'
 import Mock from '@/mock/index'
 import store  from '@/store/index'
-// import router from '@/router'
 import '@/permission'
+
+Vue.use(ElementUI);
+Vue.config.productionTip = false
+Vue.prototype.$echarts = echarts
+
+// import './plugins/element.js'
+
+
 Vue.prototype.jsonUrl = './static/json/map.json';
 new Vue({
   router,
