@@ -57,7 +57,7 @@ export const route = {
             meta: {
                 title: "迷路了*。*",
             },
-            component: 'views/error/index.vue'
+            component: 'views/error.vue'
         })
         
        

@@ -145,6 +145,23 @@
 				},
 				"menuId": "42",
 				"children": null
+			},
+			{
+				"ID": 0,
+				"parentId": "38",
+				"path": "ecms",
+				"name": "ecms",
+				"hidden": false,
+				"component": "views/examples/ecmsScript6.vue",
+				"sort": 3,
+				"meta": {
+					"keepAlive": true,
+					"defaultMenu": false,
+					"title": "ES6",
+					"icon": "edit-outline"
+				},
+				"menuId": "43",
+				"children": null
 			}
 		]
 		}]
