@@ -44,12 +44,21 @@
     <el-button>取消</el-button>
   </el-form-item>
 </el-form>
+<div>
+  <!-- 测试mixins 双向取值 -->
+ <ul>
+     <li v-for="item in data" :key = "item.id">{{item.text}}</li>
+   </ul>
+</div>
+  
  </div>
 </template>
 
 <script>
+import data from '@/components/mixins/data'
  export default {
     name:'modulesForm',
+    mixins:[data],
    data() {
       return {
         form: {
@@ -63,6 +72,9 @@
           desc: ''
         }
       }
+    },
+    created(){
+      this.initData()  //从mixins中调用的方法
     },
     methods: {
       onSubmit() {
