@@ -50,7 +50,12 @@
         <p>适应场景是带逻辑的请求参数使用</p>
         </div>
 
-       
+       <div>
+           <h3>async 函数</h3>
+           <p>async 相当于generator 语法糖</p>
+           <p>async替换了generator的*号，await替换了yield</p>
+           <p>async和await，比起星号和yield，语义更清楚了。async表示函数里有异步操作，await表示紧跟在后面的表达式需要等待结果。</p>
+       </div>
 
     </div>
  </div>
