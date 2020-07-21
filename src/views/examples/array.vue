@@ -29,7 +29,7 @@
          <li>map()       -----  返回一个新的数组 </li>
          <li>filter() ----- 包含满足条件的数组项，返回一个新数组 </li>
          <li>some() -----   如果有一个满足条件的值则返回true</li>
-          <li>every() -----  如果所有数组项都满足条件则返回true</li>
+         <li>every() -----  如果所有数组项都满足条件则返回true</li>
      </ul>
  </div>
 </template>

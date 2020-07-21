@@ -10,6 +10,7 @@
         <el-button size="small" type="primary">点击上传</el-button>
         <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
         </el-upload>
+
           <el-table
             :data="tableData"
             stripe
@@ -40,7 +41,9 @@
    data () {
      return {
          tableData:[],
-         fileList:[]
+         fileList:[],
+         dialogImageUrl: '',
+        dialogVisible: false
      }
    },
    components: {
@@ -58,25 +61,20 @@
             this.tableData.push({name:file.name})
 
        },
-       f1(){
-         let name =1
-          function f2(){
-              name++
-              console.log(name)
-         }
-         return f2
-       }
-      
 
    },
   created(){
-    let b = this.f1()
-    // this.f1()()
-    // console.log(b())
-    b()
+   
   },
 
  }
+ /*
+  初始化 调用获取下面表格的方法
+  上传按钮，需要action：‘url’,
+  el-upload 上绑定成功函数，在成功函数内判断file成功后，调用获取下面表格的方法
+  下载按钮，可以绑定下载按钮的方法，利用canvas的img图，把ulr和name传过去，生成a标签，进行下载
+
+ */
 </script>
 
 <style>
