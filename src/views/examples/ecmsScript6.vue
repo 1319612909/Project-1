@@ -148,6 +148,19 @@ let R2 = Res.next()
 console.log(R1)   //返回对象，{value:12,done:false},接收到的是yield返回的参数
 console.log(R2)   //返回对象，{value:undefined,done:true}  ，最后一步如果return 没有值，那就是undefined，如果返回有值，接收的就是return后面的值
 
+
+
+   //斐波那契
+  function result(n){
+        if(n==1||n==2){
+            return 1
+        };
+        return   result(n-2)+result(n-1);
+        
+    }
+console.log(result(11))
+
+   
 </script>
 
 <style>

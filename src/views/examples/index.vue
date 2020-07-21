@@ -27,6 +27,7 @@ https://juejin.im/post/5ed657e6f265da76dd3dd4c3
 https://juejin.im/post/5dff8a26e51d4558105420ed
 
 js es6
+https://juejin.im/post/5f12a11b6fb9a07e777eaca5  JS开发必须知道的41个技巧
 https://juejin.im/post/5f0928cf5188252e9b46f717
 https://juejin.im/post/5e5ef2f9f265da57685dc9c1
 

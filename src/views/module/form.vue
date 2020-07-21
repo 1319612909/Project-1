@@ -79,7 +79,8 @@ import data from '@/components/mixins/data'
     methods: {
       onSubmit() {
         console.log('submit!');
-      }
+      },
+     
     }
  }
 </script>

@@ -33,8 +33,8 @@ export default {
         },
         // 测试
     initData(){
-        let name = this.form.name 
-        console.log(this.form)
+        let name = this.form  //从混入的组件内部属性获取的
+        console.log(name)
         let json = [{
         
             "id":1,

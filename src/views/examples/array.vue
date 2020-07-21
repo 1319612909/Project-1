@@ -46,13 +46,21 @@
    },
    created(){
     this.pop()
+    this.arrFun()
    },
    methods:{
        pop(){
            let arr = [1,2,3]
            const res = arr.slice(0,2)
            console.log(res,arr)
-       }
+       },
+        arrFun(){
+            // 两数组合并，并去除重复的值
+            const arr1 = [1, 2, 3, 4, 5, 8, 9]
+            const arr2 = [5, 6, 7, 8, 9];
+            const result = arr1.concat(arr2.filter(v => !arr1.includes(v)))
+            console.log(result,111)
+        }
    }
  }
 </script>

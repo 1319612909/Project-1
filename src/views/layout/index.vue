@@ -52,7 +52,7 @@ import Menu from './navbar'
 .main{
   padding-left: 210px;
   background-color: #f1f1f1;
-  height: 100%;
+  min-height: 100%;
 }
 .actvieMenu{
    width: 64px;
