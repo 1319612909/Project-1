@@ -1,5 +1,5 @@
 
-//   import axios from 'axios'
+  import axios from 'axios'
   export const todo = {
     // namespaced: true,
     state:{
@@ -68,30 +68,14 @@
         //          ]
         //     context.commit('initList',list)
         // },
+
         // 使用参数结构，简化代码，在多次需要commit的时候可用
         initList({commit}){
-            const list =[
-                   {
-                       id:1,
-                       text:'测试01',
-                       done:false
-                   },
-                     {
-                       id:2,
-                       text:'测试02',
-                       done:false
-                   },
-                     {
-                       id:3,
-                       text:'测试03',
-                       done:false
-                   }
-               ]
-         commit('initList',list)
-          // axios.get('./public/list.json').then(({res})=>{
-          //     console.log(res)
-          //     commit('initList',res)
-          // })
+            // json本地数据
+          axios.get('/data/list.json').then((res)=>{
+              console.log(res)
+              commit('initList',res.data)
+          })
       }
     },
     getters: {
@@ -99,7 +83,6 @@
         // list(state) {
         //     return state.list
         // }
-
         // tab切换数据
 
         infoList(state){

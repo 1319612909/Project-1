@@ -1,6 +1,11 @@
 <template>
  <div>
-   <el-form ref="form" :model="form" label-width="80px">
+   <el-form ref="form" :model="form" label-width="80px" v-for="(item,index) in formData " :key="index">
+      <el-form-item :label="item.label" width='200px'>
+        <component :is="getComponet(item.type)" />
+      </el-form-item>
+   </el-form>
+   <!-- <el-form ref="form" :model="form" label-width="80px">
   <el-form-item label="活动名称">
     <el-input v-model="form.name"></el-input>
   </el-form-item>
@@ -43,11 +48,16 @@
     <el-button type="primary" @click="onSubmit">立即创建</el-button>
     <el-button>取消</el-button>
   </el-form-item>
-</el-form>
+</el-form> -->
  </div>
 </template>
 
 <script>
+import Input from '@/components/input'
+import Select from '@/components/select'
+import Radio from '@/components/radio'
+import DefConst from '@/utils/DEFCONST'
+import Layout from '@/utils/layout'
  export default {
    data () {
      return {
@@ -60,13 +70,23 @@
           type: [],
           resource: '',
           desc: ''
-        }
+        },
+        formData:[
+          {label:'活动名称',type:DefConst.TYPE_NAME_INPUT},
+          {label:'活动区域',type:DefConst.TYPE_NAME_SELECT},
+          {label:'特殊资源',type:DefConst.TYPE_NAME_RADIO}
+        ]
      }
    },
    components: {
-
+     Input,
+     Select,
+     Radio
    },
    methods:{
+     getComponet(type){
+       return Layout.getTypeName(type)
+     },
       onSubmit() {
         console.log('submit!');
       }

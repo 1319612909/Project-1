@@ -71,6 +71,7 @@ export default {
       getCityData:function(){
        let that = this
         axios.get('/data/map.json').then(function(response){
+          console.log(response)
           if (response.status==200) {
             const data = response.data
             that.province = []
