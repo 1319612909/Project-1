@@ -43,8 +43,11 @@
             state.doneKey = key
         }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 82cf2f300b0ed125a3ea734bed3a6d609376c815
     },
     actions:{
         // Action 提交的是 mutation，可以包含任意异步操作
@@ -68,6 +71,7 @@
         //          ]
         //     context.commit('initList',list)
         // },
+<<<<<<< HEAD
 
         // 使用参数结构，简化代码，在多次需要commit的时候可用
         initList({commit}){
@@ -76,6 +80,33 @@
               console.log(res)
               commit('initList',res.data)
           })
+=======
+        // 使用参数结构，简化代码，在多次需要commit的时候可用
+        initList({commit}){
+        //     const list =[
+        //            {
+        //                id:1,
+        //                text:'测试01',
+        //                done:false
+        //            },
+        //              {
+        //                id:2,
+        //                text:'测试02',
+        //                done:false
+        //            },
+        //              {
+        //                id:3,
+        //                text:'测试03',
+        //                done:false
+        //            }
+        //        ]
+        //  commit('initList',list)
+         console.log('789')
+        axios.get('/data/list.json').then((res)=>{
+                  console.log(res)
+                  commit('initList',res.data)
+              })
+>>>>>>> 82cf2f300b0ed125a3ea734bed3a6d609376c815
       }
     },
     getters: {
@@ -83,6 +114,10 @@
         // list(state) {
         //     return state.list
         // }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 82cf2f300b0ed125a3ea734bed3a6d609376c815
         // tab切换数据
 
         infoList(state){

@@ -1,0 +1,170 @@
+{
+	"code": 0,
+	"data": {
+		"menus": [{
+			"ID": 0,
+			"parentId": "0",
+			"path": "home",
+			"name": "home",
+			"hidden": false,
+			"component": "views/layout/home/index.vue",
+			"sort": 1,
+			"meta": {
+				"keepAlive": false,
+				"defaultMenu": false,
+				"title": "首页",
+				"icon": "s-promotion"
+			},
+			"menuId": "1",
+			"children": null
+		}, {
+			"ID": 0,
+			"parentId": "0",
+			"path": "module",
+			"name": "module",
+			"hidden": false,
+			"component": "views/module/index.vue",
+			"sort": 3,
+			"meta": {
+				"keepAlive": false,
+				"defaultMenu": false,
+				"title": "组件",
+				"icon": "files"
+			},
+			"menuId": "3",
+			"children": [{
+				"ID": 0,
+				"parentId": "3",
+				"path": "export",
+				"name": "export",
+				"hidden": false,
+				"component": "views/module/export.vue",
+				"sort": 1,
+				"meta": {
+					"keepAlive": false,
+					"defaultMenu": false,
+					"title": "导出",
+					"icon": "upload2"
+				},
+				"menuId": "4",
+				"children": null
+			}, {
+				"ID": 0,
+				"parentId": "3",
+				"path": "form",
+				"name": "modulesForm",
+				"hidden": false,
+				"component": "views/module/form.vue",
+				"sort": 2,
+				"meta": {
+					"keepAlive": true,
+					"defaultMenu": false,
+					"title": "表单",
+					"icon": "s-order"
+				},
+				"menuId": "5",
+				"children": null
+			}, {
+				"ID": 0,
+				"parentId": "3",
+				"path": "select",
+				"name": "moduleSelect",
+				"hidden": false,
+				"component": "views/module/select.vue",
+				"sort": 3,
+				"meta": {
+					"keepAlive": true,
+					"defaultMenu": false,
+					"title": "联动",
+					"icon": "s-operation"
+				},
+				"menuId": "6",
+				"children": null
+			}, {
+				"ID": 0,
+				"parentId": "3",
+				"path": "todoList",
+				"name": "todoList",
+				"hidden": false,
+				"component": "views/module/todoList.vue",
+				"sort": 4,
+				"meta": {
+					"keepAlive": false,
+					"defaultMenu": false,
+					"title": "Todo",
+					"icon": "s-unfold"
+				},
+				"menuId": "17",
+				"children": null
+			}]
+		}, {
+			"ID": 0,
+			"parentId": "0",
+			"path": "examples",
+			"name": "examples",
+			"hidden": false,
+			"component": "views/examples/index.vue",
+			"sort": 5,
+			"meta": {
+				"keepAlive": false,
+				"defaultMenu": false,
+				"title": "示例",
+				"icon": "finished"
+			},
+			"menuId": "38",
+			"children": [{
+				"ID": 0,
+				"parentId": "38",
+				"path": "slot",
+				"name": "moduleSlot",
+				"hidden": false,
+				"component": "views/examples/slot/index.vue",
+				"sort": 1,
+				"meta": {
+					"keepAlive": true,
+					"defaultMenu": false,
+					"title": "slot示例",
+					"icon": "edit-outline"
+				},
+				"menuId": "40",
+				"children": null
+			},
+			{
+				"ID": 0,
+				"parentId": "38",
+				"path": "array",
+				"name": "array",
+				"hidden": false,
+				"component": "views/examples/array.vue",
+				"sort": 2,
+				"meta": {
+					"keepAlive": true,
+					"defaultMenu": false,
+					"title": "array示例",
+					"icon": "edit-outline"
+				},
+				"menuId": "42",
+				"children": null
+			},
+			{
+				"ID": 0,
+				"parentId": "38",
+				"path": "ecms",
+				"name": "ecms",
+				"hidden": false,
+				"component": "views/examples/ecmsScript6.vue",
+				"sort": 3,
+				"meta": {
+					"keepAlive": true,
+					"defaultMenu": false,
+					"title": "ES6",
+					"icon": "edit-outline"
+				},
+				"menuId": "43",
+				"children": null
+			}
+		]
+		}]
+	},
+	"msg": "操作成功"
+}

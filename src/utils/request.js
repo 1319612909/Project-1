@@ -1,19 +1,32 @@
 import axios from 'axios'
 import router from '@/router'
 import { Loading, Message } from 'element-ui'
+<<<<<<< HEAD
 import snLodash from '@/utils/snLodash'
+=======
+// import snLodash from '@/utils/snLodash'
+>>>>>>> 82cf2f300b0ed125a3ea734bed3a6d609376c815
 import {
     Notification,
     MessageBox
 } from 'element-ui'
 
 import store from '@/store'
+<<<<<<< HEAD
 import {
     getToken,
     getUserCode,
     clearAll,
     getUserInfo
 } from './auth'
+=======
+// import {
+//     getToken,
+//     getUserCode,
+//     clearAll,
+//     getUserInfo
+// } from './auth'
+>>>>>>> 82cf2f300b0ed125a3ea734bed3a6d609376c815
 // 创建axios实例
 const service = axios.create({
         baseURL: "api" + '/service-route/' // api 的 base_url
@@ -77,7 +90,11 @@ service.interceptors.request.use(
             openLoading()
             const requestId = new Date().getTime() + '|' + getUserInfo().loginName
             const url = '/gw-sys/api/meta-login/login'
+<<<<<<< HEAD
             config.data = snLodash.deepCloneRush(config.data)
+=======
+            // config.data = snLodash.deepCloneRush(config.data)
+>>>>>>> 82cf2f300b0ed125a3ea734bed3a6d609376c815
             if (config.data && !(BlackNames.indexOf(config.url) > -1)) {
                 if (!config.data.commonInfo) {
                     config.data.commonInfo = {}

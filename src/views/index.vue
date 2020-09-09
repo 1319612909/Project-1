@@ -11,6 +11,10 @@
 
 <script>
 import Menu from '@/components/menu'
+<<<<<<< HEAD
+=======
+// import menu from '@/components/menu'
+>>>>>>> 82cf2f300b0ed125a3ea734bed3a6d609376c815
  export default {
      name:'index',
    data () {
@@ -22,6 +26,10 @@ import Menu from '@/components/menu'
        Menu
    }
  }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 82cf2f300b0ed125a3ea734bed3a6d609376c815
 </script>
 
 <style>

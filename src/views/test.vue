@@ -27,7 +27,11 @@
      fileChange(e){
         this.file = e.target.files[0]
         this.list.push(this.file)
+<<<<<<< HEAD
      }，
+=======
+     },
+>>>>>>> 82cf2f300b0ed125a3ea734bed3a6d609376c815
    getBase64(file) {
       return new Promise(function(resolve, reject) {
         let reader = new FileReader();

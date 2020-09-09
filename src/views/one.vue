@@ -96,10 +96,34 @@ import axios from 'axios'
    components: {
    }
  }
+<<<<<<< HEAD
+=======
+ /*
+ vue主要优点 ：组件化，数据驱动
+
+
+ 子传递父
+ 在子组件定义方法，把子组件的val，
+  $emit('name',val)  产生事件
+
+  在父组件里面写子组件标签上  @name="fnData"，进行监听
+  在父组件的methods{
+    fnData(val){
+      //val就是子组件传递过来的参数啦
+    }
+  }
+
+
+
+ */  
+>>>>>>> 82cf2f300b0ed125a3ea734bed3a6d609376c815
 </script>
 
 <style>
 
+<<<<<<< HEAD
 
  
+=======
+>>>>>>> 82cf2f300b0ed125a3ea734bed3a6d609376c815
 </style>
